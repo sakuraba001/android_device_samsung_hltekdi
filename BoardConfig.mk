@@ -15,11 +15,11 @@
 # inherit from common hlte
 -include device/samsung/hlte-common/BoardConfigCommon.mk
 
-TARGET_OTA_ASSERT_DEVICE := SM-N900P,hltespr
+TARGET_OTA_ASSERT_DEVICE := SCL22,hltekdi
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_msm
-TARGET_LIBINIT_DEFINES_FILE := device/samsung/hltespr/init/init_hlte.c
+TARGET_LIBINIT_DEFINES_FILE := device/samsung/hltekdi/init/init_hlte.c
 TARGET_UNIFIED_DEVICE := true
 
 # Partitions
@@ -31,4 +31,4 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_USERIMAGES_USE_EXT4 := true
 
 # inherit from the proprietary version
--include vendor/samsung/hltespr/BoardConfigVendor.mk
+-include vendor/samsung/hltekdi/BoardConfigVendor.mk

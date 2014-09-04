@@ -54,16 +54,16 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
 
     property_get("ro.bootloader", bootloader);
 
-    if (strstr(bootloader, "N900P")) {
-        /* hltespr */
+    if (strstr(bootloader, "SCL22")) {
+        /* hltekdi */
         cdma_properties("1");
-        property_set("ro.build.fingerprint", "samsung/hltespr/hltespr:4.4.2/KOT49H/N900PVPUCNAB:user/release-keys");
-        property_set("ro.build.description", "hltespr-user 4.4.2 KOT49H N900PVPUCNAB release-keys");
-        property_set("ro.product.model", "SM-N900P");
-        property_set("ro.product.device", "hltespr");
-        cdma_properties("1", "310120", "Sprint");
+        property_set("ro.build.fingerprint", "KDDI/SCL22/SCL22:4.4.2/KOT49H/SCL22KDU2FNF7:user/release-keys");
+        property_set("ro.build.description", "hltekdi-user 4.4.2 KOT49H SCL22KDU2FNF7 release-keys");
+        property_set("ro.product.model", "SCL22");
+        property_set("ro.product.device", "SCL22");
+        cdma_properties("1", "311480", "KDDI");
     }
-    /* TODO: Add Sprint MVNOs */
+    /* TODO: Add KDDI MVNOs */
 
     property_get("ro.product.device", device);
     strlcpy(devicename, device, sizeof(devicename));
